@@ -7,8 +7,8 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="ui.css" />
-    <title>Dashboard</title>
+    <link rel="stylesheet" href="faq.css" />
+    <title>FAQ</title>
   </head>
 
   <body>
@@ -24,7 +24,7 @@
         </div>
 
         <div class="sidebar">
-          <a href="ui.html" class="active">
+          <a href="ui.html">
             <span class="material-icons-sharp"> dashboard </span>
             <h3>Discover</h3>
           </a>
@@ -37,8 +37,8 @@
             <span class="material-icons-sharp"> insights </span>
             <h3>All Books</h3>
           </a>
-          <a href="faq.html">
-            <span class="material-icons-sharp"> settings </span>
+          <a href="faq.html" class="active">
+            <span class="material-icons-sharp"> quiz </span>
             <h3>FAQ</h3>
           </a>
           <a href="logout.html">
@@ -50,6 +50,7 @@
       <!-- End of Sidebar Section -->
 
       <!-- Main Content -->
+    
       <main>
         <link
           rel="stylesheet"
@@ -58,44 +59,34 @@
 
         <div class="main-content">
             <div class="main-down">
-                <div class="head"><h2>Recommended Books</h2>
-                  <button>See All ></button>
-                </div>
-                <div class="image-container" id="imageContainer">
-                  <div class="scrollable-wrapper">
-                    <div class="scrollable-content" id="scrollableContent">
-                      <img class="b1" src="ui-books/book5.jpg" alt="Image 1" id="book1" />
-                      <img src="ui-books/book1.jpg" alt="Image 2" id="book2" />
-                      <img src="ui-books/book2.jpg" alt="Image 3" id="book3" />
-                      <img src="ui-books/book3.jpg" alt="Image 1" id="book1" />
-                      <img src="ui-books/book4.jpg" alt="Image 2" id="book2" />
-                    </div>
-                  </div>
-                </div>
+                <p class="head1">Is there a limit on borrowing?</p>
+                <p class="head2">Yes, you can borrow up to 2 books per library card.</p>
+            </div>
+
+              <div class="main-down">
+                <p class="head1">How can I suggest new books</p>
+                <p class="head2">You can Explore our recommended books section where you will find all our recommended range of books !! </p>
               </div>
-      
-              <div class="main-down2">
-                <div><h2>Category</h2></div>
-                <div class="category-buttons">
-                  <button>All</button>
-                  <button>Physics</button>
-                  <button>Chemistry</button>
-                  <button>Physics</button>
-                </div>
-                <br />
-                <div class="image-container" id="imageContainer">
-                  <div class="image-container" id="imageContainer">
-                    <div class="scrollable-wrapper">
-                      <div class="scrollable-content" id="scrollableContent">
-                        <img class="b1" src="ui-books/book5.jpg" alt="Image 1" id="book1" />
-                        <img src="ui-books/book1.jpg" alt="Image 2" id="book2" />
-                        <img src="ui-books/book2.jpg" alt="Image 3" id="book3" />
-                        <img src="ui-books/book3.jpg" alt="Image 1" id="book1" />
-                        <img src="ui-books/book4.jpg" alt="Image 2" id="book2" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
+              <div class="main-down">
+                <p class="head1">How do I borrow books?</p>
+                <p class="head2">Simply login to your account and choose the book you want to borrow. It's that easy!</p>
+              </div>
+              <div class="main-down">
+                <p class="head1">Can I renew my books?</p>
+                <p class="head2">YES! You can easily renew your book online through your account. Never stop reading!</p>
+              </div>
+              <div class="main-down">
+                <p class="head1">Are there late fees?</p>
+                <p class="head2">Unfortunately YES. If you fail to return or re-issue your book within a week then you will have to pay Rs.5 per day after the date of return.</p>
+              </div>
+              <div class="main-down">
+                <p class="head1">What should I do if I encounter technical issues with the online library management system?</p>
+                <p class="head2">If you experience any technical difficulties while using the online library management system, please contact our support team for assistance. You can reach us by phone, email, or in person at the library.</p>
+              </div>
+              <div class="main-down">
+                <p class="head1">Can I access the online library management system from my mobile device?</p>
+                <p class="head2">Yes, the online library management system is mobile-friendly and can be accessed from any device with internet connectivity, including smartphones and tablets. Simply visit our website using your device's web browser to get started.</p>
               </div>
         </div>
 
@@ -110,6 +101,7 @@
           </button>
           <div class="dark-mode">
             <span class="material-icons-sharp active"> light_mode </span>
+            
             <span class="material-icons-sharp"> dark_mode </span>
           </div>
 
@@ -124,21 +116,15 @@
 
         <div class="user-profile">
           <div class="logo">
-            <h2>Engineering</h2>
-            <p>An Illustrated History</p>
+            <h2>Can't find your question in the list?</h2>
+            <p>Contact us and we will get back to you as soon as possible.</p>
             <br />
-            <img src="profile.avif" />
-            <p>AUTHOR : Tom Jackson</p>
-            <br />
-            <p>Includes : Foldout Timeline With Over Load Milestone Facts</p>
-            <br />
-            <button>Issue</button>
+            <h>Contact Us: +91 987654321</h>
+            <p>E-mail : logiclegion@gmail.com</p>
           </div>
         </div>
       </div>
     </div>
   </body>
-
   <script src="admin.js"></script>
-
 </html>
