@@ -21,7 +21,13 @@ body{
 
 .slideshow-container img {
     width: 100%;
-    height: auto;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.container_mobile{
+    display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -67,30 +73,14 @@ body{
     text-decoration: none;
 }
 
-.container span {
-    font-size: 2rem;
-    margin-left: 20px;
-    margin-bottom: 7px;
-    color: white;
-}
-
-.container button:hover,
-.container span:hover {
+.container button:hover{
     background-color: transparent;
     color: black;
-}
-
-.container span button:hover {
-    background-color: transparent;
-    color: black;
-}
-
-.mobile {
-    display: none;
+    border: 2px solid black;
 }
 
 @media screen and (max-width: 768px) {
-    .container {
+    .container_mobile {
         height: fit-content;
         background-color: rgba(255, 255, 255, 0.5);
         width: 100vw;
@@ -99,14 +89,22 @@ body{
         align-items: center;
         border-radius: 40px;
         text-align: center;
-        margin-top: 85%;
+        top: 50%;
+        position: fixed;
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%);  
+    }
+
+    .container{
+        display: none;
     }
 
     .slideshow-container {
         display: none;
     }
 
-    .container button {
+    .container_mobile button {
         height: 5vh;
         width: fit-content;
         padding: 20px;
@@ -118,20 +116,20 @@ body{
         margin-bottom: 2vh;
     }
 
-    .container span {
+    .container_mobile span {
         font-size: 2rem;
         padding-left: 10px;
         color: white;
     }
 
     body {
-        background: url("mobile.jpg");
+        background-image: url("index/mobile.jpg");
         background-size: cover;
-        /* background-repeat: no-repeat; */
+        margin: 0;
+        padding: 0;
+        background-position: center;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
     }
 }
-
-
-
-
-
