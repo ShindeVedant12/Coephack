@@ -23,6 +23,8 @@ document.getElementById("show").addEventListener('click',(e)=>{
   get(child(ref(database),'books/'+opt))
   .then((snapshot)=>{
     var data = snapshot.val();
+    const userid = data.user;
+    
     
     if(data.status == "Due"){
       var DOI = data.doi;
@@ -56,18 +58,33 @@ document.getElementById("show").addEventListener('click',(e)=>{
 document.getElementById("approve").addEventListener('click',(e)=>{
     e.preventDefault()
     var opt = document.getElementById('opt').value;
-  var updates = {
-    status : "available",
-    user : "",
-    doi:'',
-    dor:'',
+    get(child(ref(database),'books/'+opt))
+    .then((snapshot)=>{
+    var data = snapshot.val();
+    const userid = data.user
+    var updates = {
+        status : "available",
+        user : "",
+        doi:'',
+        dor:'',
+        
+      }
+      
+      update(ref(database,"books/" + opt),updates)
+      .then(()=>{
+        alert("updated!")
+        window.location.href = "manage.html"
+      })
+
+      update(ref(database,"users/" + userid),{book1:0,book2:0})
+      .then(()=>{
+        alert("updated!")
+        window.location.href = "manage.html"
+      })
+    ;})
     
-  }
-  update(ref(database,"books/" + opt),updates)
-  .then(()=>{
-    alert("updated!")
-    window.location.href = "manage.html"
-  })
+
+    
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
