@@ -22,24 +22,28 @@
             </div>
 
             <div class="sidebar">
-                <a href="#">
+                <a href="ui.html">
                     <span class="material-icons-sharp"> dashboard </span>
                     <h3>Discover</h3>
                 </a>
-                <a href="#">
+                <a href="profile.html">
                     <span class="material-icons-sharp"> person_outline </span>
                     <h3>Profile</h3>
                 </a>
 
-                <a href="#" class="active">
-                    <span class="material-icons-sharp"> insights </span>
+                <a href="allbooks.html" class="active">
+                    <span class="material-icons-sharp"> book </span>
                     <h3>All Books</h3>
                 </a>
-                <a href="#">
-                    <span class="material-icons-sharp"> settings </span>
-                    <h3>Settings</h3>
+                <a href="ebooks.html">
+                    <span class="material-icons-sharp"> menu_book </span>
+                    <h3>E Books</h3>
                 </a>
-                <a href="#">
+                <a href="faq.html">
+                    <span class="material-icons-sharp"> quiz </span>
+                    <h3>FAQ</h3>
+                </a>
+                <a href="login.html">
                     <span class="material-icons-sharp"> logout </span>
                     <h3>Logout</h3>
                 </a>
@@ -53,8 +57,8 @@
                 
                 <div class="nav">
                     <input type="text" placeholder="Search book ID" class="search-input" id = "opt">
-                    <button class="issue" id = "search">Search</button>
-                    <button class="issue" id = "issue">Issue</button>
+                    <button class="issue" id = "search" style="width: 15vh;">Search</button>
+                    <button class="issue" id = "issue" style="width: 15vh;">Issue</button>
                     <button id="menu-btn">
                         <span class="material-icons-sharp">
                             menu
@@ -68,14 +72,7 @@
                             dark_mode
                         </span>
                     </div>
-    
-                    <div class="profile">
-                        <div class="info">
-                            <p>Hey, <b>Vedant</b></p>
-                            <small class="text-muted">Admin</small>
-                        </div>
-                    </div>
-    
+
                 </div>
 
             <div class="recent-orders">
@@ -88,15 +85,14 @@
                             <th>ID</th>
                             <th>Books Name</th>
                             <th>Category</th>
-                            <th>Status</th>
+                            <th>Qty</th>
+                            
                             
                         </tr>
                     </thead>
                     <tbody></tbody>
                 </table>
-                <a href="#">Show All</a>
             </div>
-            <!-- End of Recent Orders -->
 
         </main>
 
