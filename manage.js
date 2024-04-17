@@ -63,13 +63,15 @@ document.getElementById("approve").addEventListener('click',(e)=>{
     var data = snapshot.val();
     const userid = data.user
     var qty = data.Qty
+    qty = qty + 1;
+    console.log(qty)
     var updates = {
         status : "available",
         user : "",
         doi:'',
         dor:'',
-        Qty : (qty++)
         
+        Qty : qty
       }
       
       update(ref(database,"books/" + opt),updates)
