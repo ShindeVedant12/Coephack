@@ -67,7 +67,7 @@ auth.onAuthStateChanged((user) => {
           date2 = '';
         }
         if(order.Qty){
-          update(ref(database,'books/'+order.id),{status:issued}).then(()=>{
+          update(ref(database,'books/'+order.id),{status:"issued"}).then(()=>{
             ;
           })
            }
