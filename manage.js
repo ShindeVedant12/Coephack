@@ -60,9 +60,9 @@ document.getElementById("approve").addEventListener('click',(e)=>{
     var opt = document.getElementById('opt').value;
     get(child(ref(database),'books/'+opt))
     .then((snapshot)=>{
-    var qty = data.Qty
     var data = snapshot.val();
     const userid = data.user
+    var qty = data.Qty
     var updates = {
         status : "available",
         user : "",
