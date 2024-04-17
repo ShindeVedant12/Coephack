@@ -35,6 +35,15 @@ function convertMillisecondsToDate(milliseconds) {
 const app = initializeApp(firebaseConfig);
 const database = getDatabase();
 
+auth.onAuthStateChanged((user) => {
+  if(user.email == "admin2024@gmail.com"){
+    console.log(user.email)
+  }
+  else{
+    window.location.href = "login.html"
+  }
+})
+
   get(child(ref(database),'books/'))
   .then((snapshot)=>{
     var Orders = snapshot.val();
