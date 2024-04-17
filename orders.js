@@ -66,10 +66,11 @@ auth.onAuthStateChanged((user) => {
           date = '';
           date2 = '';
         }
-
-        //  update(ref(database,'books/'+order.id),{Qty:10}).then(()=>{
-        //    ;
-        //  })
+        if(order.Qty){
+          update(ref(database,'books/'+order.id),{status:issued}).then(()=>{
+            ;
+          })
+           }
     
         if(Date.now() > order.dor & order.status != 'available'){
           update(ref(database,'books/'+order.id),{status:"Due"}).then(()=>{
