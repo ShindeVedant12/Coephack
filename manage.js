@@ -68,7 +68,7 @@ document.getElementById("approve").addEventListener('click',(e)=>{
         user : "",
         doi:'',
         dor:'',
-        Qty : qty++
+        Qty : (qty++)
         
       }
       
