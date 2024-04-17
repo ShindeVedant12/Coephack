@@ -1,6 +1,8 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
 import { getDatabase,ref,child,get,update} from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -34,6 +36,7 @@ function convertMillisecondsToDate(milliseconds) {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const database = getDatabase();
+const auth = getAuth(app);
 
 auth.onAuthStateChanged((user) => {
   if(user.email == "admin2024@gmail.com"){
@@ -64,9 +67,9 @@ auth.onAuthStateChanged((user) => {
           date2 = '';
         }
 
-        // update(ref(database,'books/'+order.id),{stars:""}).then(()=>{
-        //   ;
-        // })
+        //  update(ref(database,'books/'+order.id),{Qty:10}).then(()=>{
+        //    ;
+        //  })
     
         if(Date.now() > order.dor & order.status != 'available'){
           update(ref(database,'books/'+order.id),{status:"Due"}).then(()=>{
@@ -87,6 +90,7 @@ auth.onAuthStateChanged((user) => {
             <td>${order.user}</td>
             <td>${date}</td>
             <td>${date2}</td>
+            <td>${order.Qty}</td>
             <td>${order.cat}</td>
             <td class="${order.status === 'Due' ? 'danger' : order.status === 'available' ? 'success' : 'primary'}">${order.status}</td>
         `;
@@ -104,4 +108,3 @@ auth.onAuthStateChanged((user) => {
   const errorMessage = error.message;
   alert(errorMessage);})
 
-  
