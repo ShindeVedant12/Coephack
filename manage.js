@@ -60,7 +60,7 @@ document.getElementById("approve").addEventListener('click',(e)=>{
     var opt = document.getElementById('opt').value;
     get(child(ref(database),'books/'+opt))
     .then((snapshot)=>{
-    var qty = data.qty
+    var qty = data.Qty
     var data = snapshot.val();
     const userid = data.user
     var updates = {
@@ -68,7 +68,7 @@ document.getElementById("approve").addEventListener('click',(e)=>{
         user : "",
         doi:'',
         dor:'',
-        qty : qty++;
+        Qty : qty++;
         
       }
       
