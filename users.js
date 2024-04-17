@@ -58,7 +58,7 @@ const database = getDatabase();
         }
         
         const trContent = `
-            <td>${user.id}</td>
+            <td>${user.mis}</td>
             <td>${user.username}</td>
             <td>${user.email}</td>
             <td>${user.book1}</td>
