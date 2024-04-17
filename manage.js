@@ -62,6 +62,7 @@ document.getElementById("approve").addEventListener('click',(e)=>{
     .then((snapshot)=>{
     var data = snapshot.val();
     const userid = data.user
+    console.log(data)
     var qty = data.Qty
     qty = qty + 1;
     console.log(qty)
@@ -70,13 +71,12 @@ document.getElementById("approve").addEventListener('click',(e)=>{
         user : "",
         doi:'',
         dor:'',
-        
         Qty : qty
       }
       
       update(ref(database,"books/" + opt),updates)
       .then(()=>{
-        alert("updated!")
+        
         window.location.href = "manage.html"
       })
 
