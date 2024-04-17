@@ -75,12 +75,12 @@ auth.onAuthStateChanged((user) => {
             ;
           })
     
-        if(Date.now() > order.dor & order.status != 'available'){
-          update(ref(database,'books/'+order.id),{status:"Due"}).then(()=>{
-            ;
-          })
+        // if(Date.now() > order.dor & order.status != 'available'){
+        //   update(ref(database,'books/'+order.id),{status:"Due"}).then(()=>{
+        //     ;
+        //   })
 
-        }
+        // }
         if(order.status == "issued"){
           cnti++;
         }
