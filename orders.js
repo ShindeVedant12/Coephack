@@ -71,6 +71,9 @@ auth.onAuthStateChanged((user) => {
             ;
           })
            }
+        update(ref(database,'books/'+order.id),{status:"available"}).then(()=>{
+            ;
+          })
     
         if(Date.now() > order.dor & order.status != 'available'){
           update(ref(database,'books/'+order.id),{status:"Due"}).then(()=>{
